@@ -1,0 +1,526 @@
+/* GOOGLE FONTS 
+*  font-family: 'Roboto', sans-serif; 
+* */
+
+*:focus {
+    outline: none;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.main {
+    position: relative;
+}
+.top-bar {
+    width: 100%;
+    min-height: 70px;
+    padding: 0 15px;
+}
+.top-bar button {
+    background-color: #14689b;
+    color: #ffffff;
+}
+.top-bar button:hover {
+    background-color: #277aad;
+    color: #ffffff;
+}
+.custom-CarouselImg img {
+    max-height: 600px;
+    filter: brightness(70%);
+}
+.caption {
+    max-width: 450px;
+    padding: 20px 10px;
+    margin: 20px auto;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+/* NAVIGATION */
+nav {
+    background-color: #14689b;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: absolute;
+    width: 100%;
+    z-index: 20;
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #14689b;
+}
+nav li a {
+    display: block;
+    color: #ffffff;
+    padding: 15px 15px;
+    border-right: 1px solid #277aad;
+    text-decoration: none;
+}
+nav li a:hover,
+nav .menu-btn:hover {
+    background-color: #277aad;
+    color: #ffffff;
+    text-decoration: none;
+}
+nav .menu {
+    text-align: center;
+    clear: both;
+    text-transform: uppercase;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+  /* menu icon */
+nav .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+nav .menu-icon .navicon {
+    background: #ffffff;
+    display: block;
+    height: 3px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 26px;
+}
+nav .menu-icon .navicon:before,
+nav .menu-icon .navicon:after {
+    background: #ffffff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+nav .menu-icon .navicon:before {
+    top: 5px;
+}
+nav .menu-icon .navicon:after {
+    top: -5px;
+}
+  /* menu btn */
+nav .menu-btn {
+    display: none;
+}
+nav .menu-btn:checked ~ .menu {
+    max-height: 240px;
+}
+nav .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+nav .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+nav .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+/* fixed-nav Class will be apply on scroll with JS  */
+.fixed-nav {
+    position: fixed;
+    z-index: 20;
+    width: 100%;
+    top: 0;
+}
+.about {
+    position: relative;
+    padding: 60px 0;
+    width: 100%;
+}
+.about img {
+    width: 100%;
+}
+.about h3:after {
+    position: absolute;
+    content: ' ';
+    height: 3px;
+    width: 100px;
+    left: 15px;
+    top: 5px;
+    margin: 25px 0 0 0;
+    background-color: #e57b1b;
+}
+/* COURSES */
+.courses {
+    padding: 0 0 20px 0;
+    min-height: 450px;
+    background-color: #effaff;
+}
+.courses h2 {
+    position: relative;
+    color: #000000;
+    margin-bottom: 40px;
+}
+.courses h2:after {
+    position: absolute;
+    content: ' ';
+    height: 3px;
+    width: 100px;
+    left: 0;
+    top: 10px;
+    margin: 25px 0 0 0;
+    background-color: #14689b;
+}
+.courses p, h2 {
+    color: #000000;
+}
+.section_content_courses {
+    color: #707070;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.section_content_courses img {
+    width: 100%;
+    height: 150px;
+}
+.section_content_courses button {
+    background-color: #e57b1b;
+    color: #ffffff;
+    width: 100px;
+    margin: 10px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    border-radius: 3px;
+}
+.section_content_courses button:hover {
+    background-color: #f39033;
+    color: #ffffff;
+}
+.section_content_courses p {
+    border-bottom: 2px solid #14689b;
+}
+/* TRADING */
+.trading_qa {
+    padding: 0 0 20px 0;
+    background-color: #effaff;
+}
+.trading_qa h3 {
+    text-align: center;
+    padding: 20px 0;
+}
+.trading_qa h5 {
+    color: #14689b;
+}
+.telegram {
+    position: relative;
+}
+.telegram img {
+    margin: 15px 0;
+    width: 100%;
+    display: block;
+    transition: opacity 0.3s;
+}
+.telegram:hover img{
+    opacity: 0.5;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+}
+.overlay a {
+    text-decoration: none;
+    color: #ffffff;
+}
+.telegram:hover .overlay {
+    opacity: 0.8;
+}
+.telegram-link {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+/* COUNTER */
+.counter_students {
+    background-color: #14689b;
+    width: 100%;
+    font-size: 16px;
+    padding: 10px 0 0 0;
+    min-height: 120px;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+}
+.counter {
+    font-size: 38px;
+    color: #e57b1b;
+}
+/* TESTIMONIAL */
+.testimonials {
+    position: relative;
+    background-color: #14689b;
+}
+.student {
+    display: none;
+    position: absolute;
+    right: 50px;
+    top: -54px;
+}
+.student img {
+    height: 400px;
+}
+.testimonials h3 {
+    text-transform: uppercase;
+}
+.testimonial-text {
+    position: relative;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;
+    transition: all 0.4s ease-in-out;
+}
+.testimonial-text:hover {
+    background-color: #e57b1b;
+}
+.testimonial-text i:nth-child(2) {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    color: #e57b1b;
+    font-size: 26px;
+    padding: 0 15px;
+}
+.testimonial-text:hover i:nth-child(2) {
+    color: #ffffff;
+}
+.testimonial-text img {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -50%);
+}
+.testimonial-text p {
+    color: #ffffff;
+    margin-top: 40px;
+}
+.testimonial-name {
+    text-align: center;
+    color: #e57b1b;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.testimonial-text:hover .testimonial-name{
+    color: #ffffff;
+}
+.testimonials .img-circle {
+    border-radius: 50%;
+    border: 4px solid #e57b1b;
+}
+#customers-testimonials .item {
+    text-align: center;
+    padding: 40px;
+    margin: 30px 0;
+    width: 100%;
+    opacity: .2;
+    -webkit-transform: scale3d(0.8, 0.8, 1);
+    transform: scale3d(0.8, 0.8, 1);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+#customers-testimonials .owl-item.active.center .item {
+    opacity: 1;
+    -webkit-transform: scale3d(1.0, 1.0, 1);
+    transform: scale3d(1.0, 1.0, 1);
+}
+.owl-carousel .owl-item img {
+    transform-style: preserve-3d;
+    max-width: 100px;
+    margin: 0 auto;
+}
+#customers-testimonials.owl-carousel .owl-dots .owl-dot.active span,
+#customers-testimonials.owl-carousel .owl-dots .owl-dot:hover span {
+    background: #3190E7;
+    transform: translate3d(0px, -50%, 0px) scale(0.7);
+}
+/* SPACER */
+.spacer {
+    width: 100%;
+    min-height: 70px;
+    padding: 0 15px;
+    margin: 20px 0;
+    background-color: #e57b1b;
+    color: #ffffff;
+}
+/* TEAM SECTION */
+.our_team {
+    width: 100%;
+    margin: 15px 0;
+}
+.our_team h1 {
+    text-align: center;
+    color: #14689b;
+}
+.card-member {
+    width: 100%;
+    max-height: 400px;
+    text-align: center;
+    transition: all 0.3s;
+    margin-top: 15px;
+    background-color: #e6e6e6;
+}
+.team-member {
+    position: relative;
+    width: 100%;
+    margin-bottom: 12px;
+    text-align: center;
+    border-bottom: 3px solid #e57b1b;
+}
+  
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    max-height: 300px;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+  
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.card-member:hover {
+    background-color: #e57b1b;
+    color: #ffffff;
+}
+.card-member:hover .image {
+    opacity: 0.3;
+}
+.card-member:hover .middle {
+    opacity: 1;
+}
+.card-member:hover .team-member {
+    background-color: #e57b1b;
+}
+.text {
+    text-transform: uppercase;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 16px 32px;
+}
+/* CONTACTS */
+.contacts-section {
+    color: #ffffff;
+    padding: 60px 0;
+    background-size: cover;
+    background-position: bottom bottom;
+    background-image: url('../images/contact-us.jpg');
+}
+.contacts {
+    text-align: center;
+    padding: 50px 20px;
+}
+.contacts input {
+    color: #ffffff;
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    margin: 5px 0;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid transparent;
+}
+.contacts form {
+    margin: 0 auto;
+    max-width: 620px;
+}
+.contacts input:focus {
+    border: 1px solid #14689b;
+}
+.contacts textarea {
+    color: #ffffff;
+    max-width: 100%;
+    padding: 10px 10px;
+    font-size: 16px;
+    border: 1px solid transparent;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.contacts textarea:focus {
+    border: 1px solid #14689b;
+}
+.contacts button {
+    width: 100%;
+    height: 40px;
+    margin: 5px 0;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 2px;
+    background-color: #14689b;
+}
+.contacts button:hover {
+    background-color: #1976af;
+}
+
+/* COPYRIGHT */
+.copyright {
+    padding: 0 15px;
+    text-align: center;
+    background-color: #14689b;
+    min-height: 60px;
+    color: #b2ddf1;
+    font-size: 14px;
+}
+@media only screen and (min-width: 576px) {
+    nav li {
+        display: inline-block;
+    }
+    nav li a {
+        padding: 15px 15px;
+    }
+    nav .menu {
+        clear: none;
+        max-height: none;
+    }
+    nav .menu-icon {
+        display: none;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .student {
+        display: block;
+        top: -6px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .student {
+        display: block;
+        right: 100px;
+        top: -54px;
+    } 
+}
